@@ -1,0 +1,37 @@
+server:
+  port: 8073
+
+spring:
+  application:
+    name: "transaction"
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+  datasource:
+    username: "root"
+    password: "root"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/alinedb"
+    initialization-mode: always
+
+app:
+  admin-portal: "localhost:3000"
+  member-dashboard: "localhost:3007"
+  landing-portal: "localhost:4200"
+  sms:
+    enable: false
+  email:
+    from: "no-reply@alinefinancial.com"
+    enable: false
+  security:
+    security:
+    secret-key: "ThisIsAGreatSecretKey!!!"
+    jwt:
+      secret-key: "21b4054a-1c75-4e8a-aacd-93aaaad92e19"
+  aws:
+    email:
+      template-bucket-name: s3://jh-alinefinancial-email-templates
+    credentials:
+      access-key-id: AKIATRKPORPJQVZACE55
+      secret-access-key: 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
